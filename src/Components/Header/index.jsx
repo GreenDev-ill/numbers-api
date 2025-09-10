@@ -8,9 +8,14 @@ export default function Header(){
                 <nav>
                     <ul>
                         <Link to='/'>
-                            <button type="button">Home</button>
+                            <button type="button">Math Fact Page</button>
                         </Link>
-
+                        <Link to='/trivia'>
+                            <button type="button">Trivia Fact Page</button>
+                        </Link>
+                        <Link to='/date'>
+                            <button type="button">Date Fact Page</button>
+                        </Link>
                     </ul>
                 </nav>
             </header>

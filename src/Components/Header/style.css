@@ -1,0 +1,31 @@
+header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li button {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+nav ul li button:hover {
+    background-color: #21a1f1;
+}

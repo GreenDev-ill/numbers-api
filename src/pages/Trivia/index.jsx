@@ -1,16 +1,16 @@
 import './style.css'
 import { useEffect, useState } from "react";
-import { getMath } from '../../api/functions'; 
+import { getTrivia } from '../../api/functions'; 
 
 
 // function Home({conteudo}){ - no caso de receber o conteudo como parametro
-function Home(){
+function Trivia(){
 
   const [conteudo, setConteudo] = useState(<>...carregando...</>);
 
-  const elementButtonMath = document.getElementById("math-button");
-  elementButtonMath?.addEventListener('click', async () => {
-    const inputNumber = document.getElementById("math-number").value;
+  const elementButtonTrivia = document.getElementById("trivia-button");
+  elementButtonTrivia?.addEventListener('click', async () => {
+    const inputNumber = document.getElementById("trivia-number").value;
     if (inputNumber === '') {
       alert('Por favor, insira um número válido.');
       return;
@@ -20,7 +20,7 @@ function Home(){
   }); 
   
   async function PegaConteudo() {
-    const retornaFato = await getMath(inputGetMath());
+    const retornaFato = await getTrivia(inputGetTrivia());
     // console.log('retornaFato:', retornaFato);
     return retornaFato;
   }
@@ -36,10 +36,10 @@ function Home(){
         <>
             <main>
               <div class="example">
-                <h2>Math Number Fact</h2>
-                <input type="number" id="math-number" placeholder="Numero aqui" />
-                <button id="math-button">Get Math Fact</button>
-                <div id="math-result" class="api-result"></div>
+                <h2>Trivia Number Fact</h2>
+                <input type="number" id="trivia-number" placeholder="Numero aqui" />
+                <button id="trivia-button">Get Trivia Fact</button>
+                <div id="trivia-result" class="api-result"></div>
                   <div>
                     <div>
                      {conteudo}
@@ -50,8 +50,8 @@ function Home(){
         </>
     )
 }
-function inputGetMath(){
-  const inputNumber = document.getElementById("math-number").value;
+function inputGetTrivia(){
+  const inputNumber = document.getElementById("trivia-number").value;
   return inputNumber;
 }
 
@@ -59,4 +59,4 @@ function inputGetMath(){
 // elementButtonMath.addEventListener('click',()=>{
 //     alert(inputGetMath());
 // });
-export default Home;
+export default Trivia;

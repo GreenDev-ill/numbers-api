@@ -1,11 +1,13 @@
 import "./App.css";
 import Home from "./pages/Math"
+import Trivia from "./pages/Trivia"
+import DateFact from "./pages/DateFact"
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 
-function App() {
+function App() {  
 
   return (
     <>
@@ -13,6 +15,8 @@ function App() {
         <Routes>
         {/* <Route path='/' element={<Home conteudo={conteudo} />} /> - no caso de passar conteudo como parametro*/}
         <Route path='/' element={<Home/>}/>
+        <Route path='/trivia' element={<Trivia/>}/>
+        <Route path='/date' element={<DateFact/>}/>
         </Routes>
       <Footer />
     </>

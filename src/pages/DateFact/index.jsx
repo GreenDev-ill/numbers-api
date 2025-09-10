@@ -1,16 +1,16 @@
 import './style.css'
 import { useEffect, useState } from "react";
-import { getMath } from '../../api/functions'; 
+import { getDateFact } from '../../api/functions'; 
 
 
 // function Home({conteudo}){ - no caso de receber o conteudo como parametro
-function Home(){
+function DateFact(){
 
   const [conteudo, setConteudo] = useState(<>...carregando...</>);
 
-  const elementButtonMath = document.getElementById("math-button");
-  elementButtonMath?.addEventListener('click', async () => {
-    const inputNumber = document.getElementById("math-number").value;
+  const elementButtonDate = document.getElementById("date-button");
+  elementButtonDate?.addEventListener('click', async () => {
+    const inputNumber = document.getElementById("date-number").value;
     if (inputNumber === '') {
       alert('Por favor, insira um número válido.');
       return;
@@ -20,7 +20,7 @@ function Home(){
   }); 
   
   async function PegaConteudo() {
-    const retornaFato = await getMath(inputGetMath());
+    const retornaFato = await getDateFact(inputGetDateFact());
     // console.log('retornaFato:', retornaFato);
     return retornaFato;
   }
@@ -36,10 +36,10 @@ function Home(){
         <>
             <main>
               <div class="example">
-                <h2>Math Number Fact</h2>
-                <input type="number" id="math-number" placeholder="Numero aqui" />
-                <button id="math-button">Get Math Fact</button>
-                <div id="math-result" class="api-result"></div>
+                <h2>Date Number Fact</h2>
+                <input type="number" id="date-number" placeholder="Numero aqui" />
+                <button id="date-button">Get Date Fact</button>
+                <div id="date-result" class="api-result"></div>
                   <div>
                     <div>
                      {conteudo}
@@ -50,8 +50,8 @@ function Home(){
         </>
     )
 }
-function inputGetMath(){
-  const inputNumber = document.getElementById("math-number").value;
+function inputGetDateFact(){
+  const inputNumber = document.getElementById("date-number").value;
   return inputNumber;
 }
 
@@ -59,4 +59,4 @@ function inputGetMath(){
 // elementButtonMath.addEventListener('click',()=>{
 //     alert(inputGetMath());
 // });
-export default Home;
+export default DateFact;
