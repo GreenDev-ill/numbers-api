@@ -39,10 +39,10 @@ function Home(){
               <div class="example">
                 <h2>Math Number Fact</h2>
                 <div class="inpBut-Card">
-                <input type="number" id="Math-number" placeholder="Digite um numero:" />
+                <input type="number" id="math-number" placeholder="Digite um numero:" />
                 <button id="Math-button">Get Math Fact</button>
                 </div>
-                <div id="Math-result" class="api-result"></div>
+                <div id="math-result" class="api-result"></div>
                   <div class="conteudo-card">
                     <div>
                      {conteudo}

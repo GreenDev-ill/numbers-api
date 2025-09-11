@@ -39,10 +39,11 @@ function DateFact(){
               <div class="example">
                 <h2>Date Number Fact</h2>
                 <div class="inpBut-Card">
-                <input type="number" id="DateFact-number" placeholder="Digite um numero:" />
-                <button id="DateFact-button">Get Date Fact</button>
+                <input type="date" id="date-number" placeholder="Digite um numero:" />
+                <button id="date-button">Get Date Fact</button>
+                <button id="year-button">Get Year Fact</button>
                 </div>
-                <div id="DateFact-result" class="api-result"></div>
+                <div id="date-result" class="api-result"></div>
                   <div class="conteudo-card">
                     <div>
                      {conteudo}
