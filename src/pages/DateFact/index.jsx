@@ -47,20 +47,26 @@ function DateFact(){
   }, []);
     return(
         <>
+            <div class="pai">
             <main>
               <div class="example">
                 <h2>Date Number Fact</h2>
-                <input type="date" id="date-number" placeholder="Numero aqui" />
+
+                <div class="inpBut-Card">
+                <input type="date" id="date-number" placeholder="Digite um numero:" />
                 <button id="date-button">Get Date Fact</button>
                 <button id="year-button">Get Year Fact</button>
+                </div>
+
                 <div id="date-result" class="api-result"></div>
-                  <div>
+                  <div class="conteudo-card">
                     <div>
                      {conteudo}
                     </div>
                   </div>
                 </div>
             </main>
+          </div>
         </>
     )
 }
