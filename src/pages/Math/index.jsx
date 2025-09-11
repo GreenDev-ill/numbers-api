@@ -2,26 +2,24 @@ import './style.css'
 import { useEffect, useState } from "react";
 import { getMath } from '../../api/functions'; 
 
-
+var numeroAnterior = '';
 // function Home({conteudo}){ - no caso de receber o conteudo como parametro
 function Home(){
+const [conteudo, setConteudo] = useState(<>...carregando...</>);
 
-  const [conteudo, setConteudo] = useState(<>...carregando...</>);
 
   const elementButtonMath = document.getElementById("math-button");
   elementButtonMath?.addEventListener('click', async () => {
-    const inputNumber = document.getElementById("math-number").value;
-    if (inputNumber === '') {
-      alert('Por favor, insira um número válido.');
-      return;
-    }else{
-      setConteudo(await PegaConteudo());
-    }
+
+  if (document.getElementById("math-number").value !== numeroAnterior) {
+    numeroAnterior = document.getElementById("math-number").value;
+    setConteudo(await PegaConteudo());
+  }
+    
   }); 
-  
+
   async function PegaConteudo() {
-    const retornaFato = await getMath(inputGetMath());
-    // console.log('retornaFato:', retornaFato);
+    const retornaFato = await getMath(document.getElementById("math-number").value);
     return retornaFato;
   }
   // função "listener" que ao carregar vai transformar em lista
@@ -32,6 +30,7 @@ function Home(){
     }
     carregar();
   }, []);
+
     return(
         <>
             <main>
@@ -50,13 +49,5 @@ function Home(){
         </>
     )
 }
-function inputGetMath(){
-  const inputNumber = document.getElementById("math-number").value;
-  return inputNumber;
-}
 
-// const elementButtonMath = document.getElementById("math-button");
-// elementButtonMath.addEventListener('click',()=>{
-//     alert(inputGetMath());
-// });
 export default Home;
