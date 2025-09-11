@@ -40,7 +40,7 @@ function Home(){
                 <h2>Math Number Fact</h2>
                 <div class="inpBut-Card">
                 <input type="number" id="math-number" placeholder="Digite um numero:" />
-                <button id="Math-button">Get Math Fact</button>
+                <button id="math-button">Get Math Fact</button>
                 </div>
                 <div id="math-result" class="api-result"></div>
                   <div class="conteudo-card">
