@@ -1,8 +1,15 @@
+*{
+    font-family: Arial, Helvetica, sans-serif
+}
+
 header {
     background-color: #282c34;
     padding: 20px;
     color: white;
     text-align: center;
+    border: #282c34;
+    border-radius: 10px;
+
 }
 
 nav {
@@ -28,4 +35,18 @@ nav ul li button {
 
 nav ul li button:hover {
     background-color: #21a1f1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul a button {
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
 }

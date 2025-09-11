@@ -1,9 +1,12 @@
 footer{
-    background-color:#8C704D;
+    background-color:#404757;
     color: white;
-    padding:1em;
     display:flex;
-    flex-direction: row; 
     align-items:center; /* alinhar verticalmente */
     justify-content:center; /*alinhar horizontalmente */
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
+

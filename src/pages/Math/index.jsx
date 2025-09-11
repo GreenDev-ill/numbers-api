@@ -34,19 +34,23 @@ function Home(){
   }, []);
     return(
         <>
+            <div class="pai">
             <main>
               <div class="example">
                 <h2>Math Number Fact</h2>
-                <input type="number" id="math-number" placeholder="Numero aqui" />
-                <button id="math-button">Get Math Fact</button>
-                <div id="math-result" class="api-result"></div>
-                  <div>
+                <div class="inpBut-Card">
+                <input type="number" id="Math-number" placeholder="Digite um numero:" />
+                <button id="Math-button">Get Math Fact</button>
+                </div>
+                <div id="Math-result" class="api-result"></div>
+                  <div class="conteudo-card">
                     <div>
                      {conteudo}
                     </div>
                   </div>
                 </div>
             </main>
+          </div>
         </>
     )
 }

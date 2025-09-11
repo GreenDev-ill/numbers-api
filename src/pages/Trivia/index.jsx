@@ -34,19 +34,23 @@ function Trivia(){
   }, []);
     return(
         <>
+          <div class="pai">
             <main>
               <div class="example">
                 <h2>Trivia Number Fact</h2>
-                <input type="number" id="trivia-number" placeholder="Numero aqui" />
+                <div class="inpBut-Card">
+                <input type="number" id="trivia-number" placeholder="Digite um numero:" />
                 <button id="trivia-button">Get Trivia Fact</button>
+                </div>
                 <div id="trivia-result" class="api-result"></div>
-                  <div>
+                  <div class="conteudo-card">
                     <div>
                      {conteudo}
                     </div>
                   </div>
                 </div>
             </main>
+          </div>
         </>
     )
 }
