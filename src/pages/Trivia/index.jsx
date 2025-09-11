@@ -2,7 +2,7 @@ import './style.css'
 import { useEffect, useState } from "react";
 import { getTrivia } from '../../api/functions'; 
 
-
+var numeroAnterior = '';
 // function Home({conteudo}){ - no caso de receber o conteudo como parametro
 function Trivia(){
 
@@ -10,13 +10,10 @@ function Trivia(){
 
   const elementButtonTrivia = document.getElementById("trivia-button");
   elementButtonTrivia?.addEventListener('click', async () => {
-    const inputNumber = document.getElementById("trivia-number").value;
-    if (inputNumber === '') {
-      alert('Por favor, insira um número válido.');
-      return;
-    }else{
-      setConteudo(await PegaConteudo());
-    }
+  if (document.getElementById("trivia-number").value !== numeroAnterior) {
+    numeroAnterior = document.getElementById("trivia-number").value;
+    setConteudo(await PegaConteudo());
+  }
   }); 
   
   async function PegaConteudo() {
